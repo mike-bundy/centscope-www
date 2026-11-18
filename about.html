@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Rise - Our Mission & Story</title>
+    <title>About CentScope – Our Mission &amp; Story</title>
+    <meta name="description" content="CentScope exists to make quality financial education and personal coaching available to everyone. Coming soon to iOS, Android, and the web.">
+    <meta name="theme-color" content="#4879a4">
+    <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,12 +16,13 @@
             theme: {
                 extend: {
                     colors: {
-                        'rise-blue': '#364463',
-                        'rise-brown': '#a37d64',
-                        'rise-orange': '#e4905c',
-                        'rise-gold': '#eac351',
-                        'rise-cream': '#ece6e1',
-                        'rise-slate': '#3c454b',
+                        'cs-blue': '#4879a4',
+                        'cs-sky': '#8abee3',
+                        'cs-sun': '#f7e769',
+                        'cs-lime': '#cbd25d',
+                        'cs-navy': '#1f3a56',
+                        'cs-mist': '#eaf3fa',
+                        'cs-slate': '#3d4b5a',
                     },
                     fontFamily: {
                         'nunito': ['Nunito', 'sans-serif'],
@@ -28,52 +32,70 @@
         }
     </script>
     <style>
+        :root {
+            --plus-pattern: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            --plus-pattern-strong: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.3'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Nunito', sans-serif;
         }
-        .gradient-warm {
-            background: linear-gradient(135deg, #e4905c 0%, #eac351 100%);
+        /* Section backgrounds: the plus texture layered over a brand colour or gradient */
+        .bg-brand-blue {
+            background-color: #3c6a97;
+            background-image: var(--plus-pattern), linear-gradient(160deg, #2b537c 0%, #3c6a97 45%, #4879a4 100%);
         }
-        .gradient-warm-vertical {
-            background: #e4905c !important;
-            background: linear-gradient(to bottom, #d4784a 0%, #e4905c 40%, #d4a03a 100%) !important;
+        .bg-brand-navy {
+            background-color: #1f3a56;
+            background-image: var(--plus-pattern);
         }
-        .hero-pattern {
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        .bg-brand-citrus {
+            background-color: #f7e769;
+            background-image: var(--plus-pattern-strong), linear-gradient(135deg, #f7e769 0%, #cbd25d 100%);
+        }
+        .pinwheel-spin {
+            animation: pinwheel-spin 24s linear infinite;
+        }
+        @keyframes pinwheel-spin {
+            to { transform: rotate(360deg); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .pinwheel-spin { animation: none; }
         }
     </style>
 </head>
-<body class="bg-rise-cream min-h-screen">
+<body class="bg-cs-mist min-h-screen">
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="/" class="flex items-center">
-                        <img src="logo.png" alt="Rise" class="h-8 w-auto">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo.png" alt="CentScope" width="959" height="176" class="h-8 lg:h-9 w-auto">
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="/" class="text-rise-slate hover:text-rise-blue font-semibold transition-colors">Home</a>
-                    <a href="/about.html" class="text-rise-blue font-semibold">About</a>
-                    <a href="#" class="text-rise-slate hover:text-rise-blue font-semibold transition-colors">Features</a>
-                    <a href="#" class="text-rise-slate hover:text-rise-blue font-semibold transition-colors">Contact</a>
+                    <a href="index.html" class="text-cs-slate hover:text-cs-blue font-semibold transition-colors">Home</a>
+                    <a href="about.html" class="text-cs-blue font-semibold">About</a>
+                    <a href="index.html#features" class="text-cs-slate hover:text-cs-blue font-semibold transition-colors">Features</a>
                 </div>
 
-                <!-- CTA Buttons -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="#" class="text-rise-blue font-semibold hover:text-rise-brown transition-colors">Sign In</a>
-                    <a href="#" class="bg-rise-blue hover:bg-rise-blue/90 text-white px-6 py-3 rounded-2xl font-semibold text-sm transition-all">
-                        Get Started
+                <!-- No sign-in or sign-up yet: nothing on this site links to the app backend. -->
+                <div class="hidden md:flex items-center">
+                    <a href="#coming-soon" class="bg-cs-blue hover:bg-cs-navy text-white px-6 py-3 rounded-2xl font-semibold text-sm transition-all">
+                        Coming Soon
                     </a>
                 </div>
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
-                    <button onclick="toggleMobileMenu()" class="text-rise-blue p-2">
+                    <button onclick="toggleMobileMenu()" class="text-cs-navy p-2" aria-label="Menu">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -85,19 +107,17 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-4 py-4 space-y-3">
-                <a href="/" class="block text-rise-slate font-semibold py-2">Home</a>
-                <a href="/about.html" class="block text-rise-blue font-semibold py-2">About</a>
-                <a href="#" class="block text-rise-slate font-semibold py-2">Features</a>
-                <a href="#" class="block text-rise-slate font-semibold py-2">Contact</a>
+                <a href="index.html" class="block text-cs-slate font-semibold py-2">Home</a>
+                <a href="about.html" class="block text-cs-blue font-semibold py-2">About</a>
+                <a href="index.html#features" class="block text-cs-slate font-semibold py-2">Features</a>
                 <hr class="my-2">
-                <a href="#" class="block text-rise-blue font-semibold py-2">Sign In</a>
-                <a href="#" class="block bg-rise-blue text-white px-6 py-3 rounded-2xl font-semibold text-sm text-center">Get Started</a>
+                <a href="#coming-soon" onclick="toggleMobileMenu()" class="block bg-cs-blue text-white px-6 py-3 rounded-2xl font-semibold text-sm text-center">Coming Soon</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="gradient-warm hero-pattern pt-32 pb-20 md:pt-40 md:pb-24">
+    <section class="bg-brand-blue pt-32 pb-20 md:pt-40 md:pb-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6">
                 Our Mission
@@ -113,19 +133,19 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <span class="text-rise-orange font-bold text-sm tracking-wider uppercase">Our Story</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-rise-blue mt-2 mb-6">
+                    <span class="text-cs-blue font-bold text-sm tracking-wider uppercase">Our Story</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-cs-navy mt-2 mb-6">
                         Built to Bridge the Financial Literacy Gap
                     </h2>
-                    <div class="space-y-4 text-rise-slate/80 text-lg leading-relaxed">
+                    <div class="space-y-4 text-cs-slate/80 text-lg leading-relaxed">
                         <p>
-                            Rise was born from a simple observation: too many hardworking people struggle with their finances not because they lack discipline, but because they've never had access to proper financial education.
+                            CentScope was born from a simple observation: too many hardworking people struggle with their finances not because they lack discipline, but because they've never had access to proper financial education.
                         </p>
                         <p>
                             We partnered with credit unions who share our vision—institutions that genuinely care about their members' financial wellbeing, not just their account balances.
                         </p>
                         <p>
-                            Today, Rise connects thousands of members with certified financial coaches, interactive educational resources, and tools that make financial planning accessible to everyone.
+                            Soon, CentScope will connect members with certified financial coaches, interactive educational resources, and tools that make financial planning accessible to everyone—on iOS, Android, and the web.
                         </p>
                     </div>
                 </div>
@@ -139,67 +159,67 @@
     </section>
 
     <!-- Values Section -->
-    <section class="py-20 md:py-32 bg-rise-cream">
+    <section class="py-20 md:py-32 bg-cs-mist">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-rise-orange font-bold text-sm tracking-wider uppercase">Our Values</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-rise-blue mt-2 mb-4">
+                <span class="text-cs-blue font-bold text-sm tracking-wider uppercase">Our Values</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-cs-navy mt-2 mb-4">
                     What Drives Us
                 </h2>
-                <p class="text-xl text-rise-slate/80">
-                    These core values guide everything we do at Rise.
+                <p class="text-xl text-cs-slate/80">
+                    These core values guide everything we do at CentScope.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Value 1 -->
                 <div class="bg-white rounded-3xl p-8 text-center shadow-sm">
-                    <div class="w-16 h-16 gradient-warm rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="w-16 h-16 bg-cs-sun rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-cs-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-rise-blue mb-3">Compassion</h3>
-                    <p class="text-rise-slate/70">
+                    <h3 class="text-xl font-bold text-cs-navy mb-3">Compassion</h3>
+                    <p class="text-cs-slate/70">
                         We meet people where they are, without judgment, and guide them forward with understanding.
                     </p>
                 </div>
 
                 <!-- Value 2 -->
                 <div class="bg-white rounded-3xl p-8 text-center shadow-sm">
-                    <div class="w-16 h-16 bg-rise-blue rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <div class="w-16 h-16 bg-cs-blue rounded-2xl flex items-center justify-center mx-auto mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-rise-blue mb-3">Trust</h3>
-                    <p class="text-rise-slate/70">
+                    <h3 class="text-xl font-bold text-cs-navy mb-3">Trust</h3>
+                    <p class="text-cs-slate/70">
                         We protect member privacy and build relationships through transparency and reliability.
                     </p>
                 </div>
 
                 <!-- Value 3 -->
                 <div class="bg-white rounded-3xl p-8 text-center shadow-sm">
-                    <div class="w-16 h-16 bg-rise-brown rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="w-16 h-16 bg-cs-lime rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-cs-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-rise-blue mb-3">Empowerment</h3>
-                    <p class="text-rise-slate/70">
+                    <h3 class="text-xl font-bold text-cs-navy mb-3">Empowerment</h3>
+                    <p class="text-cs-slate/70">
                         We give people the tools and knowledge to take control of their financial futures.
                     </p>
                 </div>
 
                 <!-- Value 4 -->
                 <div class="bg-white rounded-3xl p-8 text-center shadow-sm">
-                    <div class="w-16 h-16 bg-rise-gold rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="w-16 h-16 bg-cs-sky rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-cs-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-rise-blue mb-3">Accessibility</h3>
-                    <p class="text-rise-slate/70">
+                    <h3 class="text-xl font-bold text-cs-navy mb-3">Accessibility</h3>
+                    <p class="text-cs-slate/70">
                         Financial education should be available to everyone, regardless of background or language.
                     </p>
                 </div>
@@ -207,35 +227,39 @@
         </div>
     </section>
 
-    <!-- Impact Section -->
-    <section class="py-20 md:py-32 bg-rise-blue">
+    <!-- At Launch (replaces the usage-stats block until there are real numbers to report) -->
+    <section class="py-20 md:py-32 bg-brand-navy">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-rise-gold font-bold text-sm tracking-wider uppercase">Our Impact</span>
+                <span class="text-cs-sun font-bold text-sm tracking-wider uppercase">Coming Soon</span>
                 <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-2 mb-4">
-                    Real Results, Real Lives Changed
+                    Launching on iOS, Android &amp; Web
                 </h2>
                 <p class="text-xl text-white/80">
-                    The numbers tell the story of thousands of people taking control of their finances.
+                    CentScope is on its way. Here's what to expect when it arrives.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center">
-                    <p class="text-5xl md:text-6xl font-extrabold text-rise-gold mb-2">10K+</p>
-                    <p class="text-white/80 text-lg">Members Served</p>
+                    <p class="text-5xl md:text-6xl font-extrabold text-cs-sun mb-2">3</p>
+                    <p class="text-white text-lg font-bold">Platforms</p>
+                    <p class="text-white/70">iOS, Android &amp; Web</p>
                 </div>
                 <div class="text-center">
-                    <p class="text-5xl md:text-6xl font-extrabold text-rise-gold mb-2">50+</p>
-                    <p class="text-white/80 text-lg">Partner Institutions</p>
+                    <p class="text-5xl md:text-6xl font-extrabold text-cs-sun mb-2">2</p>
+                    <p class="text-white text-lg font-bold">Languages</p>
+                    <p class="text-white/70">English &amp; Spanish</p>
                 </div>
                 <div class="text-center">
-                    <p class="text-5xl md:text-6xl font-extrabold text-rise-gold mb-2">89%</p>
-                    <p class="text-white/80 text-lg">Completion Rate</p>
+                    <p class="text-5xl md:text-6xl font-extrabold text-cs-sun mb-2">1-on-1</p>
+                    <p class="text-white text-lg font-bold">Coaching</p>
+                    <p class="text-white/70">With certified financial coaches</p>
                 </div>
                 <div class="text-center">
-                    <p class="text-5xl md:text-6xl font-extrabold text-rise-gold mb-2">$2M+</p>
-                    <p class="text-white/80 text-lg">Member Savings</p>
+                    <p class="text-5xl md:text-6xl font-extrabold text-cs-sun mb-2">$0</p>
+                    <p class="text-white text-lg font-bold">Cost to Members</p>
+                    <p class="text-white/70">Free education, coaching &amp; tools</p>
                 </div>
             </div>
         </div>
@@ -245,11 +269,11 @@
     <section class="py-20 md:py-32 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-rise-orange font-bold text-sm tracking-wider uppercase">Our Team</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-rise-blue mt-2 mb-4">
-                    The People Behind Rise
+                <span class="text-cs-blue font-bold text-sm tracking-wider uppercase">Our Team</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-cs-navy mt-2 mb-4">
+                    The People Behind CentScope
                 </h2>
-                <p class="text-xl text-rise-slate/80">
+                <p class="text-xl text-cs-slate/80">
                     Passionate experts dedicated to financial wellness.
                 </p>
             </div>
@@ -259,9 +283,9 @@
                 <div class="text-center">
                     <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=320&h=320&fit=crop&crop=face" 
                          alt="Jennifer Martinez" class="w-40 h-40 rounded-full mx-auto mb-6 object-cover shadow-lg">
-                    <h3 class="text-xl font-bold text-rise-blue">Jennifer Martinez</h3>
-                    <p class="text-rise-brown font-semibold">Founder & CEO</p>
-                    <p class="text-rise-slate/70 mt-3 text-sm">
+                    <h3 class="text-xl font-bold text-cs-navy">Jennifer Martinez</h3>
+                    <p class="text-cs-blue font-semibold">Founder & CEO</p>
+                    <p class="text-cs-slate/70 mt-3 text-sm">
                         15+ years in financial services and community development.
                     </p>
                 </div>
@@ -270,9 +294,9 @@
                 <div class="text-center">
                     <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=320&h=320&fit=crop&crop=face" 
                          alt="David Chen" class="w-40 h-40 rounded-full mx-auto mb-6 object-cover shadow-lg">
-                    <h3 class="text-xl font-bold text-rise-blue">David Chen</h3>
-                    <p class="text-rise-brown font-semibold">Head of Coaching</p>
-                    <p class="text-rise-slate/70 mt-3 text-sm">
+                    <h3 class="text-xl font-bold text-cs-navy">David Chen</h3>
+                    <p class="text-cs-blue font-semibold">Head of Coaching</p>
+                    <p class="text-cs-slate/70 mt-3 text-sm">
                         Certified Financial Counselor with a passion for education.
                     </p>
                 </div>
@@ -281,9 +305,9 @@
                 <div class="text-center">
                     <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=320&h=320&fit=crop&crop=face" 
                          alt="Maria Rodriguez" class="w-40 h-40 rounded-full mx-auto mb-6 object-cover shadow-lg">
-                    <h3 class="text-xl font-bold text-rise-blue">Maria Rodriguez</h3>
-                    <p class="text-rise-brown font-semibold">Partnership Director</p>
-                    <p class="text-rise-slate/70 mt-3 text-sm">
+                    <h3 class="text-xl font-bold text-cs-navy">Maria Rodriguez</h3>
+                    <p class="text-cs-blue font-semibold">Partnership Director</p>
+                    <p class="text-cs-slate/70 mt-3 text-sm">
                         Former credit union executive bringing institutional expertise.
                     </p>
                 </div>
@@ -292,50 +316,48 @@
     </section>
 
     <!-- Partner With Us CTA -->
-    <section class="py-20 md:py-32 bg-rise-cream">
+    <section class="py-20 md:py-32 bg-cs-mist">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <span class="text-rise-orange font-bold text-sm tracking-wider uppercase">Partner With Us</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-rise-blue mt-2 mb-6">
-                        Bring Rise to Your Credit Union
+                    <span class="text-cs-blue font-bold text-sm tracking-wider uppercase">Partner With Us</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-cs-navy mt-2 mb-6">
+                        Bring CentScope to Your Credit Union
                     </h2>
-                    <p class="text-lg text-rise-slate/80 mb-6 leading-relaxed">
-                        Join the growing network of forward-thinking institutions that are investing in their members' financial futures. Our white-label platform integrates seamlessly with your brand.
+                    <p class="text-lg text-cs-slate/80 mb-6 leading-relaxed">
+                        Join the forward-thinking institutions investing in their members' financial futures. Our white-label platform integrates seamlessly with your brand.
                     </p>
                     <ul class="space-y-4 mb-8">
                         <li class="flex items-start">
-                            <svg class="w-6 h-6 text-rise-orange mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-cs-blue mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span class="text-rise-slate/80">Full white-label customization</span>
+                            <span class="text-cs-slate/80">Full white-label customization</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-6 h-6 text-rise-orange mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-cs-blue mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span class="text-rise-slate/80">Dedicated success manager</span>
+                            <span class="text-cs-slate/80">Dedicated success manager</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-6 h-6 text-rise-orange mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-cs-blue mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span class="text-rise-slate/80">Comprehensive analytics and reporting</span>
+                            <span class="text-cs-slate/80">Comprehensive analytics and reporting</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-6 h-6 text-rise-orange mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-cs-blue mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span class="text-rise-slate/80">Bilingual content library</span>
+                            <span class="text-cs-slate/80">Bilingual content library</span>
                         </li>
                     </ul>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#" class="bg-rise-blue hover:bg-rise-blue/90 text-white px-8 py-4 rounded-2xl font-bold text-center transition-all">
-                            Schedule a Demo
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                        <a href="index.html#institutions" class="bg-cs-blue hover:bg-cs-navy text-white px-8 py-4 rounded-2xl font-bold text-center transition-all">
+                            Explore Institution Features
                         </a>
-                        <a href="#" class="bg-transparent hover:bg-rise-blue/10 text-rise-blue border-2 border-rise-blue px-8 py-4 rounded-2xl font-bold text-center transition-all">
-                            Download Brochure
-                        </a>
+                        <span class="text-cs-blue font-bold text-center">Coming soon to iOS, Android &amp; Web</span>
                     </div>
                 </div>
                 <div>
@@ -347,32 +369,74 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 hero-pattern" style="background: linear-gradient(to bottom, #d4784a 0%, #e4905c 40%, #d4a03a 100%)">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">
-                Ready to Start Your Journey?
+    <!-- Coming Soon: platform availability. Nothing here links out; swap in store links at launch. -->
+    <section id="coming-soon" class="bg-brand-citrus py-20 md:py-28 scroll-mt-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-24 h-24 bg-white rounded-full shadow-lg flex items-center justify-center mx-auto mb-8">
+                <img src="mark.png" alt="" width="320" height="320" class="w-16 h-16 pinwheel-spin">
+            </div>
+            <p class="inline-block bg-cs-navy text-white rounded-full px-4 py-1.5 mb-6 text-sm font-bold tracking-wider uppercase">Coming Soon</p>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-cs-navy mb-6">
+                Focus on Every Cent
             </h2>
-            <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
-                Join thousands of members who are taking control of their financial futures with Rise.
+            <p class="text-xl md:text-2xl text-cs-navy/80 mb-12 max-w-2xl mx-auto">
+                CentScope is on its way to iOS, Android, and the web. It's free for members.
             </p>
-            <a href="#" class="inline-block bg-rise-blue hover:bg-rise-blue/90 text-white px-10 py-4 rounded-2xl font-bold text-lg transition-all shadow-lg hover:shadow-xl">
-                Get Started Free
-            </a>
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <div class="bg-white rounded-3xl p-6 shadow-lg flex items-center gap-4">
+                    <div class="w-14 h-14 bg-cs-blue rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold tracking-wider uppercase text-cs-blue">Coming Soon</p>
+                        <p class="text-2xl font-extrabold text-cs-navy leading-tight">iOS</p>
+                        <p class="text-sm text-cs-slate/70">On the App Store</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl p-6 shadow-lg flex items-center gap-4">
+                    <div class="w-14 h-14 bg-cs-lime rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <svg class="w-7 h-7 text-cs-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold tracking-wider uppercase text-cs-blue">Coming Soon</p>
+                        <p class="text-2xl font-extrabold text-cs-navy leading-tight">Android</p>
+                        <p class="text-sm text-cs-slate/70">On Google Play</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl p-6 shadow-lg flex items-center gap-4">
+                    <div class="w-14 h-14 bg-cs-sky rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <svg class="w-7 h-7 text-cs-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold tracking-wider uppercase text-cs-blue">Coming Soon</p>
+                        <p class="text-2xl font-extrabold text-cs-navy leading-tight">Web</p>
+                        <p class="text-sm text-cs-slate/70">In your browser</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-rise-blue text-white py-16">
+    <footer class="bg-cs-navy text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-12">
+            <div class="grid md:grid-cols-5 gap-12">
                 <!-- Brand -->
                 <div>
                     <div class="flex items-center mb-6">
-                        <img src="logo.png" alt="Rise" class="h-7 w-auto brightness-0 invert">
+                        <img src="logo-reversed.png" alt="CentScope" width="959" height="176" class="h-8 w-auto">
                     </div>
                     <p class="text-white/70 leading-relaxed">
                         Empowering financial wellness through education, coaching, and community.
+                    </p>
+                    <p class="text-cs-sun font-semibold mt-4">
+                        Coming soon to iOS, Android &amp; Web.
                     </p>
                 </div>
 
@@ -380,10 +444,10 @@
                 <div>
                     <h4 class="font-bold text-lg mb-4">For Members</h4>
                     <ul class="space-y-3 text-white/70">
-                        <li><a href="#" class="hover:text-white transition-colors">Get Started</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Financial Coaching</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Educational Resources</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Budget Calculator</a></li>
+                        <li><a href="index.html#members" data-audience="members" class="hover:text-white transition-colors">Financial Coaching</a></li>
+                        <li><a href="index.html#members" data-audience="members" class="hover:text-white transition-colors">Educational Library</a></li>
+                        <li><a href="index.html#members" data-audience="members" class="hover:text-white transition-colors">Financial Assessments</a></li>
+                        <li><a href="index.html#members" data-audience="members" class="hover:text-white transition-colors">Budget Calculator</a></li>
                     </ul>
                 </div>
 
@@ -391,10 +455,21 @@
                 <div>
                     <h4 class="font-bold text-lg mb-4">For Institutions</h4>
                     <ul class="space-y-3 text-white/70">
-                        <li><a href="#" class="hover:text-white transition-colors">Schedule Demo</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Case Studies</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Partner Program</a></li>
+                        <li><a href="index.html#institutions" data-audience="institutions" class="hover:text-white transition-colors">White-Label Branding</a></li>
+                        <li><a href="index.html#institutions" data-audience="institutions" class="hover:text-white transition-colors">Member Management</a></li>
+                        <li><a href="index.html#institutions" data-audience="institutions" class="hover:text-white transition-colors">Analytics &amp; Reporting</a></li>
+                        <li><a href="index.html#institutions" data-audience="institutions" class="hover:text-white transition-colors">Resource Library</a></li>
+                    </ul>
+                </div>
+
+                <!-- For Community -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">For Community</h4>
+                    <ul class="space-y-3 text-white/70">
+                        <li><a href="index.html#community" data-audience="community" class="hover:text-white transition-colors">Lead Management</a></li>
+                        <li><a href="index.html#community" data-audience="community" class="hover:text-white transition-colors">Analytics Dashboard</a></li>
+                        <li><a href="index.html#community" data-audience="community" class="hover:text-white transition-colors">Resource Publishing</a></li>
+                        <li><a href="index.html#community" data-audience="community" class="hover:text-white transition-colors">Partner Code</a></li>
                     </ul>
                 </div>
 
@@ -402,8 +477,7 @@
                 <div>
                     <h4 class="font-bold text-lg mb-4">Company</h4>
                     <ul class="space-y-3 text-white/70">
-                        <li><a href="/about.html" class="hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Support</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
                     </ul>
@@ -412,9 +486,10 @@
 
             <div class="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-white/60 text-sm">
-                    © 2025 Rise Financial Wellness. All rights reserved.
+                    © 2026 CentScope. All rights reserved.
                 </p>
                 <div class="flex gap-6 mt-4 md:mt-0">
+                    <!-- [PLACEHOLDER: point these at the CentScope social profiles once they exist] -->
                     <a href="#" class="text-white/60 hover:text-white transition-colors">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                     </a>
