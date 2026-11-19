@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Static marketing site for CentScope, a financial wellness platform (rebranded from Rise). No build step, no package.json, no framework — just HTML files that load Tailwind and Nunito from CDNs. Serve locally with `python -m http.server 8000` or `npx serve .`, or open the HTML directly.
 
-**The product is pre-launch.** It is coming soon to iOS, Android, and the web, and the site must not link to anything backend-related: no sign-in, sign-up, demo booking, store listings, or app URLs. CTAs either scroll within the page or go to `about.html`. Don't add usage numbers or testimonials either; there are no users yet. `README.md` has an "At Launch" list of what to wire up when that changes.
+**The product is pre-launch.** It is coming soon to iOS, Android, and the web, and the site must not link to anything backend-related: no sign-in, sign-up, demo booking, store listings, or app URLs. CTAs either scroll within the page or go to `about.html`. Don't add usage numbers or testimonials either; there are no users yet. Don't invent people: no made-up names, titles, or bios, and no stock photos of identifiable people standing in for the team, members, or partners. Where a real person or photo is still missing, use the dashed placeholder panels already in `about.html` (team cards, story photo, partnership photo) and the Community hero in `index.html`. `README.md` has an "At Launch" list of what to wire up when that changes.
 
 ## Files
 

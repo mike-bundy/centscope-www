@@ -64,7 +64,7 @@ Places that are waiting on a live product:
 
 ## Placeholder Graphics Needed
 
-All photos are stock images from Unsplash.
+The site shows no invented people. Slots that need a real person or a real photo of people are dashed placeholder panels (the three team cards, the About story photo, the About partnership photo, and the Community hero). The two remaining photos are Unsplash stock with nobody identifiable in them (Members and Institutions heroes).
 
 ### index.html
 
@@ -91,7 +91,7 @@ All photos are stock images from Unsplash.
    - Style: Warm, inclusive, welcoming
 
 2. **Team Member Headshots**
-   - Description: 3 professional photos for team section. Names and bios are placeholders too
+   - Description: 3 professional photos for team section, with real names, titles, and bios. The cards currently read "Team Member / Role / Bio coming soon."
    - Dimensions: 200x200px circular
 
 3. **Partnership Illustration**
